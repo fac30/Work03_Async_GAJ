@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Challenge | Functions and asynchronous JavaScript</title>
-  </head>
-  <body>
-    <h1>Open the console</h1>
-    <script></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkShop 1 gaj</title>
+</head>
+<body>
+  <script>
+//Challenge 1
+const returnsOne= ()=>{ return 1}
+    // const logger = (type)=> {console.log(type)}
+    // logger(returnsOne);
+//Challenge 2
+    // function logger(thing) {
+    //   console.log(typeof thing)
+    // }
+    // logger(returnsOne());
+//Challenge 3
+    // let handleClick = (event)=>{
+    //  console.log(event.x, event.y)
+    // }
+    // window.addEventListener('click', handleClick)
+//Challenge 4
+    const one = (callback)=>{
+    callback('GAJ')
+    }
+    one(x => console.log(x))
+
+//     const button = document.body.appendChild(document.createElement('button'))
+
+// // Set up an event listener on the button for 'click' events
+// button.addEventListener('click', function(event) {
+//   // This function is the callback that runs when the button is clicked
+//   console.log('Button was clicked!');
+  
+//   // Access event properties
+//   console.log('Mouse X position:', event.clientY);
+//   console.log('Mouse Y position:', event.clientX);
+// });
+
+// const asyncDouble = (num,callback)=>{
+// setTimeout(()=>{ callback(num * 2)},1000)
+// }
+// asyncDouble(10, x => console.log(x));
+
+//WORKSHOP TASK!
+ const light = (string, callback) => {
+  setTimeout(()=>{ console.log(string); callback(string)},1000)
+ }
+light('green', ()=>{
+  light('amber',()=>{
+    light('red', ()=>{
+      light('amber',()=>{
+        light('green',()=>{
+           setTimeout(()=>console.log('finished'),1000)
+        })
+      })
+    })
+  })})
+
+
+  </script>
+  
+</body>
 </html>
